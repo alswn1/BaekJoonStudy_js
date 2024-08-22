@@ -1,5 +1,5 @@
-let path = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-let input = require('fs').readFileSync(path).toString().trim().split(/r?\n/);
+var path = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
+var input = require('fs').readFileSync(path).toString().trim().split(/r?\n/);
 
 var num = input[0];
 var sum = 1;
