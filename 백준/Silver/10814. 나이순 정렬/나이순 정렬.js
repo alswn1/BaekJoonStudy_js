@@ -5,11 +5,13 @@ let count = parseInt(input[0]);
 let arr = [];
 
 for (let i=1; i<=count; i++) {
-    arr.push({"age":parseInt(input[i].split(" ")[0]), "name":input[i].split(" ")[1]});
+    let arrLine = input[i].split(' ');
+    arrLine[0] = Number(arrLine[0]);
+    arr.push(arrLine);
 }
 
-arr.sort((a, b) => a.age - b.age);
+arr.sort((a, b) => a[0] - b[0]);
 
-arr.forEach((e) => {
-    console.log(`${e.age} ${e.name}`);
-})
+let answer = arr.map(e => e.join(' ')).join('\n');
+
+console.log(answer);
