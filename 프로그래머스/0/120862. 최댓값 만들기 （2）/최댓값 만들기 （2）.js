@@ -1,12 +1,5 @@
 function solution(numbers) {
-    var answer = numbers[0] * numbers[1];
+    numbers.sort((a, b) => a - b);
     
-    for (let i=0; i < numbers.length-1; i++) {
-        for (let j = i+1; j < numbers.length; j++) {
-            var gop = numbers[i] * numbers[j];
-            if (answer < gop) answer = gop;
-        }
-    }
-    
-    return answer;
+    return Math.max(numbers[0] * numbers[1], numbers[numbers.length-1] * numbers[numbers.length-2]);
 }
