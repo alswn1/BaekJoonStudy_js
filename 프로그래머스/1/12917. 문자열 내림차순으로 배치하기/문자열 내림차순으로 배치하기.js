@@ -1,1 +1,1 @@
-var solution = n => n.split('').sort((a, b) => b.charCodeAt() - a.charCodeAt()).join('');
+var solution = n => n.split('').sort().reverse().join('');
