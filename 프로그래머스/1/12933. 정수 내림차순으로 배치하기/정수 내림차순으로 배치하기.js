@@ -1,12 +1,5 @@
 function solution(n) {
-    var arr = n.toString().split('');
+    var answer = n.toString().split('').sort().reverse().join("");
 
-    arr.sort((a, b) => b - a);
-
-    var answer = "";
-    arr.map((e) => {
-        answer += e;
-    })
-
-    return parseInt(answer);
+    return +answer;
 }
