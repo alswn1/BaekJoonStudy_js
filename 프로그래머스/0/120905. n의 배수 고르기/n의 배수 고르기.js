@@ -1,10 +1,3 @@
 function solution(n, numlist) {
-    let arr = [];
-    numlist.map((e) => {
-        if (e % n == 0) {
-            arr.push(e);
-        }
-    });
-
-    return arr;
+    return numlist.filter((e) => e % n === 0);
 }
