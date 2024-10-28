@@ -1,3 +1,1 @@
-function solution(n) {
-    return n.toString();
-}
+const solution = String
