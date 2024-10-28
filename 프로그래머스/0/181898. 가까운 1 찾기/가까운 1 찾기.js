@@ -1,3 +1,3 @@
 function solution(arr, idx) {
-    return arr.findIndex((e, i) => i > idx-1 && e == 1);
+    return arr.indexOf(1, idx);
 }
