@@ -1,3 +1,3 @@
 function solution(myString) {
-    return myString.replaceAll("a", "A").split('').map((e) => e != "A" ? e.toLowerCase() : e).join('');
+    return myString.toLowerCase().replaceAll("a", "A");
 }
