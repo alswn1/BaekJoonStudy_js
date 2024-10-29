@@ -1,13 +1,10 @@
 function max(a, b) {
-    while(b != 0) {
-        const temp = b;
-        b = a % b;
-        a = temp;
+    while(b) {
+        [a, b] = [b, a % b];
     }
     return a;
 }
 
-function solution(n) {    
-    let gcd = max(n, 6);
-    return n / gcd;
+function solution(n) {
+    return n / max(n, 6);
 }
