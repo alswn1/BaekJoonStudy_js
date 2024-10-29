@@ -1,14 +1,10 @@
 const controls = {
-    'w' : 1,
-    's' : -1,
-    'd' : 10,
-    'a' : -10
+    'w' : (n) => n + 1,
+    's' : (n) => n -1,
+    'd' : (n) => n + 10,
+    'a' : (n) => n - 10
 }
 
 function solution(n, control) {
-    control.split('').map((e) => {
-        n += controls[e];
-    });
-    
-    return n;
+    return [...control].reduce((a, c) => controls[c](a), n);
 }
