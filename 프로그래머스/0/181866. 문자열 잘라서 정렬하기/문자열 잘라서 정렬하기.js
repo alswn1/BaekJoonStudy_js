@@ -1,3 +1,3 @@
 function solution(myString) {
-    return myString.split('x').filter((e) => e != '').sort();
+    return myString.split('x').filter((e) => e).sort();
 }
