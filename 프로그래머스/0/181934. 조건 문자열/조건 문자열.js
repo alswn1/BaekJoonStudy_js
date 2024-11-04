@@ -7,5 +7,5 @@ function solution(ineq, eq, n, m) {
     }
     
     const op = operations[ineq + eq];
-    return +(op(n, m))
+    return +(op(n, m));
 }
